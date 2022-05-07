@@ -1,4 +1,5 @@
 # SkyWars
+https://hub.docker.com/repository/docker/chickyd0t/skywars
 
 Игра с веб-интерфейсом, битва героев в стиле олдскульных браузерных игр.  
 #### Выбор:

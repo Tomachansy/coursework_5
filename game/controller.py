@@ -1,6 +1,6 @@
 from typing import Optional
 
-from hero import Hero
+from game.hero import Hero
 
 
 class BaseSingleton(type):
@@ -72,7 +72,7 @@ class Game(metaclass=BaseSingleton):
         if dealt_damage == "use skill":
             return self.enemy_use_skill()
         elif dealt_damage is not [None, str]:
-            if dealt_damage is not 0:
+            if dealt_damage != 0:
                 self.player.take_hit(dealt_damage)
                 return f"{self.enemy.name.title()} используя {self.enemy.weapon.name} пробивает " \
                        f"{self.player.armor.name} и наносит {dealt_damage} урона.\n"
@@ -103,7 +103,7 @@ class Game(metaclass=BaseSingleton):
         """
         dealt_damage: Optional[float] = self.player.hit(self.enemy)
         if dealt_damage is not None:
-            if dealt_damage is not 0:
+            if dealt_damage != 0:
                 self.enemy.take_hit(dealt_damage)
                 return f"{self.player.name.title()} используя {self.player.weapon.name} пробивает " \
                        f"{self.enemy.armor.name} и наносит {dealt_damage} урона.\n{self.next_turn()}"

@@ -3,11 +3,11 @@ from typing import Dict
 
 from flask import Flask, render_template, request, redirect, url_for
 
-from equipment import EquipmentData
-from utils import get_equipment_data
-from personages import personage_classes
-from hero import Player, Enemy, Hero
-from controller import Game
+from game.controller import Game
+from game.equipment import EquipmentData
+from game.hero import Hero, Player, Enemy
+from game.personages import personage_classes
+from game.utils import get_equipment_data
 
 app = Flask(__name__)
 app.url_map.strict_slashes = False

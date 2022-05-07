@@ -1,7 +1,7 @@
 from abc import ABC
 from dataclasses import dataclass
 
-from skills import Skill, FerociousKick, PowerfulStab
+from game.skills import Skill, FerociousKick, PowerfulStab
 
 
 @dataclass

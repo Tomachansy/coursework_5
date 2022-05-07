@@ -4,7 +4,7 @@ services:
 
   app:
     image: chickyd0t/skywars:version-1
-    command: gunicorn --bind 0.0.0.0:5000 wsgi:app
+    command: gunicorn game.app:app -b 0.0.0.0:5000
     restart: always
 
   nginx:

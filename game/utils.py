@@ -5,7 +5,7 @@ import os
 import marshmallow
 import marshmallow_dataclass
 
-from equipment import EquipmentData
+from game.equipment import EquipmentData
 
 BASE_DIR: str = os.path.abspath(os.path.dirname(__file__))
 EQUIPMENT_PATH: str = os.path.join(BASE_DIR, 'data', 'equipment.json')

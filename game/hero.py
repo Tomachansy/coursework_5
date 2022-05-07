@@ -4,8 +4,8 @@ from abc import ABC, abstractmethod
 from random import randint
 from typing import Optional
 
-from personages import Personage
-from equipment import Weapon, Armor
+from game.equipment import Weapon, Armor
+from game.personages import Personage
 
 STAMINA_PER_ROUND = 1
 
